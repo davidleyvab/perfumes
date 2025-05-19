@@ -1,0 +1,496 @@
+/* styles.css */
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header y Navegación */
+header {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.logo p {
+    font-size: 14px;
+    font-style: italic;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #d4af37;
+}
+
+/* Banner Principal */
+#banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/api/placeholder/1200/500') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 120px 0;
+}
+
+#banner h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+#banner p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#explorar-btn {
+    background-color: #d4af37;
+    color: #1a1a1a;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#explorar-btn:hover {
+    background-color: #c19b26;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Secciones Generales */
+section {
+    padding: 80px 0;
+}
+
+section h2 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+section h2:after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 3px;
+    background-color: #d4af37;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Perfumes Destacados */
+.perfumes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.perfume-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+}
+
+.perfume-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.perfume-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.perfume-card h3 {
+    font-size: 18px;
+    margin: 15px 15px 10px;
+}
+
+.perfume-card .descripcion {
+    font-size: 14px;
+    color: #666;
+    margin: 0 15px 15px;
+    height: 60px;
+}
+
+.perfume-card .precio {
+    font-size: 20px;
+    font-weight: 700;
+    color: #d4af37;
+    margin: 0 15px 15px;
+}
+
+.comprar-btn {
+    background-color: #1a1a1a;
+    color: white;
+    border: none;
+    padding: 12px 15px;
+    margin: 0 15px 15px;
+    width: calc(100% - 30px);
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.comprar-btn:hover {
+    background-color: #d4af37;
+}
+
+/* Categorías */
+.categoria-flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.categoria {
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+}
+
+.categoria:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.categoria img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.categoria h3 {
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+/* Novedades */
+.novedades-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 30px;
+}
+
+.novedad {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.novedad img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.novedad-content {
+    padding: 20px;
+}
+
+.novedad h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.novedad p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.leer-mas {
+    display: inline-block;
+    color: #d4af37;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.leer-mas:hover {
+    color: #1a1a1a;
+}
+
+/* Testimonios */
+#testimonios {
+    background-color: #1a1a1a;
+    color: white;
+}
+
+.testimonios-slider {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonio {
+    text-align: center;
+    padding: 30px;
+}
+
+.testimonio p {
+    font-size: 18px;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.testimonio .autor {
+    font-size: 16px;
+    font-style: normal;
+    color: #d4af37;
+}
+
+.controles {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.controles button {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.controles button:hover {
+    background-color: white;
+    color: #1a1a1a;
+}
+
+/* Newsletter */
+#newsletter {
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+#newsletter p {
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#suscripcion-form {
+    display: flex;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#suscripcion-form input {
+    flex: 1;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+}
+
+#suscripcion-form button {
+    background-color: #d4af37;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#suscripcion-form button:hover {
+    background-color: #c19b26;
+}
+
+/* Footer */
+footer {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 60px 0 30px;
+}
+
+.footer-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.footer-column h3:after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    background-color: #d4af37;
+    bottom: -10px;
+    left: 0;
+}
+
+.footer-column p, 
+.footer-column address p {
+    font-size: 14px;
+    color: #bbb;
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #bbb;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #d4af37;
+}
+
+.social-icons {
+    display: flex;
+    margin-top: 20px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    color: white;
+    border-radius: 50%;
+    margin-right: 10px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.social-icon:hover {
+    background-color: #d4af37;
+    transform: translateY(-3px);
+}
+
+.copyright {
+    text-align: center;
+    border-top: 1px solid #333;
+    padding-top: 30px;
+    color: #888;
+    font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+    }
+    
+    nav ul {
+        margin-top: 20px;
+    }
+    
+    nav ul li {
+        margin: 0 10px;
+    }
+    
+    #banner {
+        padding: 80px 0;
+    }
+    
+    #banner h2 {
+        font-size: 32px;
+    }
+    
+    .novedades-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    #suscripcion-form {
+        flex-direction: column;
+    }
+    
+    #suscripcion-form input,
+    #suscripcion-form button {
+        width: 100%;
+        border-radius: 5px;
+    }
+    
+    #suscripcion-form button {
+        margin-top: 10px;
+    }
+}
